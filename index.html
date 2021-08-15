@@ -20,6 +20,8 @@
     <title>Shoppe</title>
     <link rel="stylesheet" href="./assest/css/base.css" />
     <link rel="stylesheet" href="./assest/css/main.css" />
+    <link rel="stylesheet" href="./assest/css/grid.css" />
+    <link rel="stylesheet" href="./assest/css/responsive.css" />
     <link
       rel="stylesheet"
       href="./assest/font/fontawesome-free-5.15.3-web/css/all.min.css"
@@ -28,8 +30,8 @@
   <body>
     <div class="app">
       <div class="header">
-        <div class="grid">
-          <div class="header__navbar">
+        <div class="grid wide">
+          <div class="header__navbar hide-on-tablet hide-on-mobile">
             <ul class="header__navbar-list">
               <li class="header__navbar-item header__navbar-item--separate">
                 Vào cửa hàng trên ứng dụng TSHOP
@@ -209,6 +211,16 @@
           </div>
           <!-- header with search -->
           <div class="header-with-search">
+            <div class="header__menu-mobile" onclick="myFunction()">
+              <i class="fas fa-bars header__menu-mobile__icons"></i>
+              <i
+                class="
+                  fas
+                  fa-times
+                  header-mobile-icons-close header__menu-mobile-hide
+                "
+              ></i>
+            </div>
             <div class="header__logo">
               <a href="/">
                 <svg viewBox="0 0 192 65" class="header__logo-img">
@@ -227,7 +239,7 @@
                 <input
                   type="text"
                   class="header__search-input"
-                  placeholder="Nhập để tìm kiếm sản phẩm"
+                  placeholder="Search..."
                 />
                 <!-- search history -->
                 <div class="header_search-history">
@@ -501,9 +513,16 @@
         </div>
       </div>
       <div class="app__container">
-        <div class="grid">
-          <div class="grid__row app__content">
-            <div class="grid__column-2">
+        <div class="grid wide">
+          <div class="slider">
+            <img
+              src="./assest/img/img_vartar/shopee.jpg"
+              alt="shopee"
+              class="slider__img"
+            />
+          </div>
+          <div class="row app__content">
+            <div class="col l-2 m-3 overflow-scroll c-12">
               <nav class="category">
                 <h3 class="category__heading">
                   <i class="category__heading-icon fas fa-list"></i>Danh mục
@@ -532,15 +551,17 @@
                 </ul>
               </nav>
             </div>
-            <div class="grid__column-10">
+            <div class="col l-10 m-9 c-12">
               <div class="home-filter">
-                <span class="home-filter__label">Sắp xếp theo</span>
+                <span class="home-filter__label hide-on-mobile"
+                  >Sắp xếp theo</span
+                >
                 <button class="btn home-filter__btn">Phổ biến</button>
                 <button class="btn home-filter__btn btn--primary">
                   Mới nhất
                 </button>
                 <button class="btn home-filter__btn">Bán chạy</button>
-                <div class="select-input">
+                <div class="select-input hide-on-mobile">
                   <span class="select-input__label">Giá</span>
                   <i class="select-input__icon fas fa-chevron-down"></i>
                   <!-- list options -->
@@ -579,9 +600,10 @@
                 </div>
               </div>
               <div class="home-product">
-                <div class="grid__row">
+                <!-- <div class="grid"> -->
+                <div class="row">
                   <!-- item 1 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -687,7 +709,7 @@
                     </a>
                   </div>
                   <!-- item 2 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -793,7 +815,7 @@
                     </a>
                   </div>
                   <!-- item 3 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -899,7 +921,7 @@
                     </a>
                   </div>
                   <!-- item 4 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -1005,7 +1027,7 @@
                     </a>
                   </div>
                   <!-- item 5 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -1111,7 +1133,7 @@
                     </a>
                   </div>
                   <!-- item 6 -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -1217,7 +1239,7 @@
                     </a>
                   </div>
                   <!-- item 7  -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -1323,7 +1345,7 @@
                     </a>
                   </div>
                   <!-- item 8  -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -1429,7 +1451,7 @@
                     </a>
                   </div>
                   <!-- item 9  -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -1535,7 +1557,7 @@
                     </a>
                   </div>
                   <!-- item 10  -->
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- product-item -->
                     <a class="home-product-item" href="#">
                       <div
@@ -1641,6 +1663,7 @@
                     </a>
                   </div>
                 </div>
+                <!-- </div> -->
               </div>
               <ul class="pagination home-product__pagination">
                 <li class="pagination-item">
@@ -1690,10 +1713,10 @@
       <div class="tamshop-footer-before"></div>
 
       <div class="footer">
-        <div class="grid">
-          <div class="grid__row">
+        <div class="grid wide">
+          <div class="row">
             <div class="tamshop-footer-section"></div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-3 c-12">
               <div class="footer-content">
                 <h3 class="footer-title">CHĂM SÓC KHÁCH HÀNG</h3>
                 <ul class="footer-list">
@@ -1718,7 +1741,7 @@
                 </ul>
               </div>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-3 c-12 hide-on-tablet">
               <div class="footer-content">
                 <h3 class="footer-title">VỀ TAMSHOP</h3>
                 <ul class="footer-list">
@@ -1745,7 +1768,7 @@
                 </ul>
               </div>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-3 c-12">
               <div class="footer-content">
                 <h3 class="footer-title">THANH TOÁN</h3>
                 <ul class="footer-list">
@@ -1772,7 +1795,7 @@
                 </ul>
               </div>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-3 c-12">
               <div class="footer-content">
                 <h3 class="footer-title">THEO DÕI CHÚNG TÔI TRÊN</h3>
                 <ul class="footer-list">
@@ -1797,8 +1820,8 @@
                 </ul>
               </div>
             </div>
-            <div class="grid__column-2-4">
-              <div class="footer-content">
+            <div class="col l-2-4 m-3 c-12">
+              <div class="footer-content hide-on-mobile">
                 <h3 class="footer-title">TẢI ỨNG DỤNG TAMSHOP NGAY THÔI</h3>
 
                 <a class="footer-qrcore" href="#">
@@ -1828,9 +1851,44 @@
       </div>
     </div>
     <!-- ---modal---- -->
-    <div class="modal">
+    <div class="modal modal-hide">
       <div class="modal__overlay"></div>
       <div class="modal__body">
+        <!-- menu mobile form -->
+        <div class="menu-mobile-form">
+          <ul class="menu-items-mobile">
+            <li class="menu-item-mobile">
+              <a href="#" class="menu-item-mobile__link">
+                <i class="menu-item-mobile__icon far fa-bell"></i>
+                Thông báo
+              </a>
+            </li>
+            <li class="menu-item-mobile">
+              <a href="#" class="menu-item-mobile__link">
+                <i class="menu-item-mobile__icon far fa-question-circle"></i>
+                Trợ giúp
+              </a>
+            </li>
+            <li class="menu-item-mobile">
+              <a href="#" class="menu-item-mobile__link">
+                <i class="menu-item-mobile__icon far fa-user-circle"></i>
+                Tài Khoản của tôi
+              </a>
+            </li>
+            <li class="menu-item-mobile">
+              <a href="#" class="menu-item-mobile__link">
+                <i class="menu-item-mobile__icon fas fa-sign-in-alt"></i>
+                Đăng Nhập
+              </a>
+            </li>
+            <li class="menu-item-mobile">
+              <a href="#" class="menu-item-mobile__link">
+                <i class="menu-item-mobile__icon fas fa-sign-out-alt"></i>
+                Đăng xuất
+              </a>
+            </li>
+          </ul>
+        </div>
         <!-- --register form------->
 
         <!-- <div class="auth-form">
@@ -1898,15 +1956,15 @@
           </div>
         </div> -->
         <!-- --login form------->
-        <div class="auth-form">
-          <!-- main-form -->
+        <!--<div class="auth-form">
+          <!-- main-form 
           <div class="auth-form__container">
-            <!-- header-form -->
+            <!-- header-form 
             <div class="auth-form__header">
               <h3 class="auth-form__heading">Đăng nhập</h3>
               <span class="auth-form__switch-btn">Đăng ký</span>
             </div>
-            <!-- ---body form-- -->
+            <!-- ---body form-- 
             <div class="auth-form__form">
               <div class="auth-form__group">
                 <input
@@ -1923,7 +1981,7 @@
                 />
               </div>
             </div>
-            <!-- ---policy-text--- -->
+            <!-- ---policy-text--- 
             <div class="auth-form__aside">
               <div class="auth-form__help">
                 <a href="" class="auth-form__help-link auth-form__help-forgot"
@@ -1933,7 +1991,7 @@
                 <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
               </div>
             </div>
-            <!-- ---form control--- -->
+            <!-- ---form control--- 
             <div class="auth-form__control">
               <button class="btn auth-form__control-back btn--nomal">
                 TRỞ LẠI
@@ -1956,7 +2014,9 @@
             </a>
           </div>
         </div>
+        !-->
       </div>
     </div>
+    <script src="./assest/js/menu/menu_mobile.js"></script>
   </body>
 </html>
